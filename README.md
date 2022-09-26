@@ -1,2 +1,2 @@
 # GestionDeProjetsMW
-Gestion de projeten sprint PPE
+Gestion de projet en sprint PPE
