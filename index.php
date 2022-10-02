@@ -24,6 +24,26 @@ $contact->setRole('un role');
 $contact->setCustomer($customer);
 $contact->setHost($host);
 
+$project = new Project();
+$project->setCode(1323);
+$project->setName('testNomProjet');
+$project->setLastPass('testLastPass');
+$project->setLinkMockUps('testLinkMockUps');
+$project->setManagedServer('testManagedServer');
+$project->setNotes('testNotes');
+$project->setCustomer($customer);
+$project->setHost($host);
+
+$environment = new Environment();
+$environment->setLink('testLink');
+$environment->setName('testNomProjet');
+$environment->setIpAddress('testIpAddress');
+$environment->setSshPort('testSshPort');
+$environment->setSshName('testSshName');
+$environment->setPhpmyadminLink('testPhpMyadmin');
+$environment->setIpRestriction('testIpRestriction');
+$environment->setProject($project);
+
 var_dump($customer->getnameCustomer());
 var_dump($host->getnameHost());
 var_dump($contact->getEmail());
