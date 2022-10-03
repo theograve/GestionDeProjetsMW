@@ -5,34 +5,13 @@ require_once 'Customer.php';
 
 class Project
 {
-    private int $code;
-    private string $name;
+    use PersonalInfoTrait;
+
     private string $lastPass;
     private string $linkMockUps;
     private string $managedServer;
-    private string $notes;
     private Customer $customer;
     private Host $host;
-
-    public function getCode(): int
-    {
-        return $this->code;
-    }
-
-    public function setCode(int $code): void
-    {
-        $this->code = $code;
-    }
-
-    public function getName(): string
-    {
-        return $this->name;
-    }
-
-    public function setName(string $name): void
-    {
-        $this->name = $name;
-    }
 
     public function getLastPass(): string
     {
@@ -62,16 +41,6 @@ class Project
     public function setManagedServer(string $managedServer): void
     {
         $this->managedServer = $managedServer;
-    }
-
-    public function getNotes(): string
-    {
-        return $this->notes;
-    }
-
-    public function setNotes(string $notes): void
-    {
-        $this->notes = $notes;
     }
 
     public function getCustomer(): Customer
