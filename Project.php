@@ -5,7 +5,7 @@ require_once 'Customer.php';
 
 class Project
 {
-    use PersonalInfoTrait;
+    use CodeNameAndNotesTrait;
 
     private string $lastPass;
     private string $linkMockUps;

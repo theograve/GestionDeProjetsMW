@@ -1,5 +1,5 @@
 <?php
 
 class Customer {
-    use PersonalInfoTrait;
+    use CodeNameAndNotesTrait;
 }

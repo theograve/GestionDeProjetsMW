@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__.'/PersonalInfo.php';
+require_once __DIR__.'/CodeNameAndNotes.php';
 require_once __DIR__.'/Contact.php';
 require_once __DIR__.'/Customer.php';
 require_once __DIR__.'/Environment.php';

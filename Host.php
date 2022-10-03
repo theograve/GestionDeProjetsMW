@@ -1,5 +1,5 @@
 <?php
 
 class Host {
-    use PersonalInfoTrait;
+    use CodeNameAndNotesTrait;
 }
