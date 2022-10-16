@@ -1,11 +1,14 @@
 <?php
 
-require_once __DIR__.'/CodeNameAndNotes.php';
-require_once __DIR__.'/Contact.php';
-require_once __DIR__.'/Customer.php';
-require_once __DIR__.'/Environment.php';
-require_once __DIR__.'/Host.php';
-require_once __DIR__.'/Project.php';
+require 'include/navbar.php';
+require 'autoloader.php';
+require_once __DIR__.'/Classe/CodeNameAndNotes.php';
+
+use Classe\Contact;
+use Classe\Customer;
+use Classe\Environment;
+use Classe\Host;
+use Classe\Project;
 
 
 $customer = new Customer();
