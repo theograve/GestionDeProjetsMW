@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 17 oct. 2022 à 09:23
+-- Généré le : lun. 17 oct. 2022 à 09:24
 -- Version du serveur : 10.4.22-MariaDB
 -- Version de PHP : 8.1.1
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `bdd_ppe_gestiondeprojetsmw`
+-- Base de données : `gestiondeprojetsmw`
 --
 
 -- --------------------------------------------------------
@@ -41,7 +41,16 @@ CREATE TABLE `contact` (
 --
 
 INSERT INTO `contact` (`id`, `email`, `phone_number`, `role`, `host_id`, `customer_id`) VALUES
-(1, 'test@gmail.com', '0687346524', 'C', NULL, NULL);
+(1, 'FRANCOISE@gmail.fr', '0635068473', 'H', 1, 1),
+(2, 'LEMARCHAND@gmail.fr', '0635064536', 'C', 2, 2),
+(3, 'ROCANCOURT@gmail.fr', '0635262473', 'C', 3, 3),
+(4, 'BUISARD@gmail.fr', '0789068473', 'C', 4, 4),
+(5, 'LAROSE@gmail.fr', '0635784933', 'H', 5, 5),
+(6, 'HOLLEY@gmail.fr', '0836789473', 'C', 6, 6),
+(7, 'RIVIERE@gmail.fr', '0695068473', 'C', 7, 7),
+(8, 'LEGRAND@gmail.fr', '0653805389', 'C', 8, 8),
+(9, 'DUDOUET-MALASSIS@gmail.fr', '0635748473', 'H', 9, 9),
+(10, 'MORIN@gmail.fr', '0456768479', 'C', 10, 10);
 
 -- --------------------------------------------------------
 
@@ -55,6 +64,22 @@ CREATE TABLE `customer` (
   `name` varchar(255) NOT NULL,
   `notes` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `customer`
+--
+
+INSERT INTO `customer` (`id`, `code`, `name`, `notes`) VALUES
+(1, '8520', 'Fleming', 'Complexenoteuno'),
+(2, '6324', 'Crane', 'Complexenotedos'),
+(3, '7979', 'Harris', 'Complexenotetres'),
+(4, '1111', 'Mcguire', 'Complexenotequatro'),
+(5, '8552', 'Daugherty', 'Complexenotequince'),
+(6, '0000', 'Jackson', 'Complexenoteseis'),
+(7, '1111', 'Robbins', 'Complexenotesiete'),
+(8, '5996', 'Singh', 'Complexenoteocho'),
+(9, '4475', 'Frye', 'Complexenotenueve'),
+(10, '3333', 'Meyer', 'Complexenotediece');
 
 -- --------------------------------------------------------
 
@@ -74,6 +99,21 @@ CREATE TABLE `environment` (
   `project_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Déchargement des données de la table `environment`
+--
+
+INSERT INTO `environment` (`id`, `name`, `code`, `ip_adresse`, `ssh_port`, `ssh_username`, `phpmyadmin_link`, `ip_restriction`, `project_id`) VALUES
+(5, 'Kadyn', '1111', '195.18.109.190', 22, 'SSHu1', 'https://www.phpmyadmin.net/', 1, 1),
+(6, 'Gaige', '2222', '135.100.211.12', 22, 'SSHu2', 'https://www.phpmyadmin.net/', 1, 2),
+(7, 'Aryanna', '3333', '21.226.193.139', 22, 'SSHu3', 'https://www.phpmyadmin.net/', 1, 3),
+(8, 'Lamont', '4444', '185.100.211.12', 22, 'SSHu4', 'https://www.phpmyadmin.net/', 1, 4),
+(9, 'Darwin', '5555', '185.119.169.95', 22, 'SSHu5', 'https://www.phpmyadmin.net/', 1, 5),
+(10, 'Shaun', '6666', '72.155.169.255', 22, 'SSHu6', 'https://www.phpmyadmin.net/', 1, 6),
+(11, 'Octavio', '7777', '107.7.62.233', 22, 'SSHu7', 'https://www.phpmyadmin.net/', 1, 7),
+(12, 'Karla', '8888', '81.163.197.19', 22, 'SSHu8', 'https://www.phpmyadmin.net/', 1, 8),
+(13, 'Lizbeth', '9999', '63.10.248.63', 22, 'SSHu9', 'https://www.phpmyadmin.net/', 1, 9);
+
 -- --------------------------------------------------------
 
 --
@@ -86,6 +126,22 @@ CREATE TABLE `host` (
   `name` varchar(255) NOT NULL,
   `notes` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `host`
+--
+
+INSERT INTO `host` (`id`, `code`, `name`, `notes`) VALUES
+(1, '1859', 'Kamila', 'Simplenoteuno'),
+(2, '8652', 'Isabel', 'Simplenotedos'),
+(3, '4669', 'Nathalia', 'Simplenotetres'),
+(4, '7695', 'Presley', 'Simplenotequatro'),
+(5, '8629', 'Samara', 'Simplenotequince'),
+(6, '9685', 'Jake', 'Simplenoteseis'),
+(7, '3524', 'Sherlyn', 'Simplenotesiete'),
+(8, '5663', 'Jameson', 'Simplenoteocho'),
+(9, '7748', 'Gilberto', 'Simplenotenueve'),
+(10, '6660', 'Thaddeus', 'Simplenotediece');
 
 -- --------------------------------------------------------
 
@@ -104,6 +160,21 @@ CREATE TABLE `project` (
   `host_id` int(11) DEFAULT NULL,
   `customer_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `project`
+--
+
+INSERT INTO `project` (`id`, `name`, `code`, `lastpass_folder`, `link_mock_ups`, `managed_server`, `notes`, `host_id`, `customer_id`) VALUES
+(1, 'York', '0000', 'C:\racin_foldermainfolder1', 'idkALink', 1, 'noteUno', 1, 1),
+(2, 'Wolfe', '1111', 'C:\racin_foldermainfolder2', 'idkALink', 2, 'noteDos', 2, 2),
+(3, 'Jones', '2222', 'C:\racin_foldermainfolder3', 'idkALink', 3, 'noteTrece', 3, 3),
+(4, 'Gallagher', '3344', 'C:\racin_foldermainfolder4', 'idkALink', 4, 'noteQuatro', 4, 4),
+(5, 'Campbell', '4455', 'C:\racin_foldermainfolder5', 'idkALink', 5, 'noteCinqo', 5, 5),
+(6, 'Weaver', '5566', 'C:\racin_foldermainfolder6', 'idkALink', 6, 'noteSeis', 6, 6),
+(7, 'Khan', '6677', 'C:\racin_foldermainfolder7', 'idkALink', 7, 'noteSiete', 7, 7),
+(8, 'Molina', '7788', 'C:\racin_foldermainfolder8', 'idkALink', 8, 'noteOcho', 8, 8),
+(9, 'Carpenter', '8899', 'C:\racin_foldermainfolder9', 'idkALink', 9, 'noteNueve', 9, 9);
 
 --
 -- Index pour les tables déchargées
@@ -152,31 +223,31 @@ ALTER TABLE `project`
 -- AUTO_INCREMENT pour la table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT pour la table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT pour la table `environment`
 --
 ALTER TABLE `environment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT pour la table `host`
 --
 ALTER TABLE `host`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT pour la table `project`
 --
 ALTER TABLE `project`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- Contraintes pour les tables déchargées
