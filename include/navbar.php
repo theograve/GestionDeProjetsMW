@@ -20,8 +20,8 @@
             </div>
             <div class="menu-items">
                 <li><a href="#">Tableau de bord</a></li>
-                <li><a href="#">Projets</a></li>
-                <li><a href="#">Clients</a></li>
+                <li><a href="./ajoutProjet.php">Projets</a></li>
+                <li><a href="./ajoutClient.php">Clients</a></li>
                 <li><a href="./ajoutHebergeur.php">Hébergeurs</a></li>
             </div>
         </div>
