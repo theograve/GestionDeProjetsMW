@@ -9,5 +9,3 @@ use Classe\Customer;
 use Classe\Environment;
 use Classe\Host;
 use Classe\Project;
-
-header('Location: ./ajout.php');
