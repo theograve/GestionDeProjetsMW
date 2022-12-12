@@ -10,9 +10,12 @@ require('include/navbar.php');
 <form action="BDD/requets.php" method="post">
     <label>Nom : </label>
     <p><input type="text" name="name"></p>
+    
     <label>Client : </label>  <br>
+    <p><input type="text" name="client"></p>
     
     <label>Hébergeur : </label>  <br>
+    <p><input type="text" name="host"></p>
 
     <br><input type="checkbox" class="check-box" name="ServeurInfo"> <label>Serveur infogéré </label><br>
     <label>Notes/remarques : </label>
