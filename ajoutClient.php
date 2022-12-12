@@ -9,8 +9,10 @@ require('include/navbar.php');
 <body>
 <form action="BDD/requets.php" method="post">
     <label>Nom : </label>
+    
     <p><input type="text" name="name"></p>
     <label>Notes : </label>
+    
     <p><input type="text" name="notes"></p>
     <p><input type="submit" name="insertCustomer" value="Insérer le client"></p>
 </form>
