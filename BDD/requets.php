@@ -74,6 +74,7 @@ if(isset($_POST['insertProjet'])){
     // Requête mysql pour insérer des données
     $sql = "INSERT INTO projet(name, notes, code, lastpass_folder ,link_mock_ups ,managed_server ,host_id, customer_id) VALUES (:name, :notes, '0000', :lastpass_folder, :link_mock_ups, :managed_server, :host_id, :customer_id)";
     $res = $db->prepare($sql);
+    
     $exec = $res->execute(array(":name"=>$name,":notes"=>$notes));
 
     // vérifier si la requête d'insertion a réussi
